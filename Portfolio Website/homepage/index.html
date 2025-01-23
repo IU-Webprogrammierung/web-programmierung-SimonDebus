@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Startseite</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <!--Einbindung der Icon Bibliothek von Font Awesome--> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> 
 </head>
 <body>
-    
+    <!--Einleitender Willkommenstext mit Bild und Link zum Kontaktformular-->
+    <img src="Profilbild.png" alt="Selbstporträt in schwarzweiß mit Namen rechts">
+    <h1>Hey, ich bin Simon! <br> UX-Designer in Ausbildung und Werkstudent bei der Isabellenhütte Heusler GmbH & Co. KG</h1>
+    <h2>Viel Spaß beim Erkunden meines Portfolios</h2>
+    <h3>#GernePerDU</h3>
+    <a href="../contact/contact.html" role="button" aria-label="Kontakt aufnehmen">Kontakt</a>
+    <h3>Lass uns vernetzen!</h3>
+    <a href="https://www.linkedin.com/in/simon-debus-ux/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin" style="font-size: 2em; color: #0A66C2;"></i>
+    </a>
+    <!--Klickbare Navigations-Karten-->
+    <div id="ctaflex">
+        <a href="../projects/projects.html">
+            <div class="teaser">
+                <img src="Projekte_Teaser.jpeg" alt="UX Prototyp und Wireframing Prozess und Konzeption" width="20%">
+                <h3>Projekte & Erfahrung</h3>
+            </div>
+        </a>
+        <a href="../music_playlists/music_playlists.html">
+            <div class="teaser">
+                <img src="Musik_Teaser.jpeg" alt="Symbol für die Musik- oder Videowiedergabeleiste." width="20%"> 
+                <h3>Musik & Playlists</h3>
+            </div>
+        </a>
+   </div>
 </body>
+<footer>
+    &copy 2025 Simon Debus
+    <a href="#">Impressum</a>
+    <a href="#">AGB</a>
+    <a href="#">Datenschutzerklärung</a>
+</footer>
 </html>
