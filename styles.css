@@ -24,7 +24,7 @@ footer a{
 }
 
 /* Akzente setzen mit dem "Span" Element */
-#farbig{
+.farbig{
     color: #e26105;
 }
 
