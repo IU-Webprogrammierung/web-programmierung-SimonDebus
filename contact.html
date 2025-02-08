@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
+
 <body>
     <h1>Kontakt</h1>
-    <h2>Ob Sie ein Projekt im Kopf haben, Fragen zu meinem Portfolio haben oder einfach nur in Kontakt treten möchten – <br>
-        zögern Sie nicht, mir eine Nachricht zu schicken. <i class="fas fa-envelope"></i></h2>
-        <!--Dropdown Menü zur Auswahl des Anliegens-->
+    <h2>Ob Sie ein Projekt im Kopf haben, Fragen zu meinem Portfolio haben oder einfach nur in Kontakt treten möchten –
+        <br>
+        zögern Sie nicht, mir eine Nachricht zu schicken. <i class="fas fa-envelope"></i>
+    </h2>
+    <!--Dropdown Menü zur Auswahl des Anliegens-->
     <form id="kontaktformular" action="#" method="post">
-        <label for="dropdown"><h3>Womit kann ich Ihnen helfen?</h3></label>
+        <label for="dropdown">
+            <h3>Womit kann ich Ihnen helfen?</h3>
+        </label>
         <select name="anliegen" id="anliegen">
             <option value="projektanfrage">Projektanfrage/Zusammenarbeit</option>
             <option value="webdesign">Webdesign</option>
@@ -38,11 +44,14 @@
             <label for="nachricht">Ihre Nachricht*</label>
             <textarea name="nachricht" id="nachricht" required></textarea>
         </div>
-        <input type="submit" value="Absenden">
+        <input type="submit" value="Absenden" aria-label="Formular absenden">
     </form>
     <div id="standort">
         <h4>📍Siegen, Nordrhein-Westfalen</h4>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80553.26614156346!2d7.942396015781122!3d50.88135079650416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc1c91e71085a7%3A0x3dc2391d0cdbdbc7!2sSiegen!5e0!3m2!1sde!2sde!4v1738186295369!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80553.26614156346!2d7.942396015781122!3d50.88135079650416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc1c91e71085a7%3A0x3dc2391d0cdbdbc7!2sSiegen!5e0!3m2!1sde!2sde!4v1738186295369!5m2!1sde!2sde"
+            title="Standort Karte" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
 </body>
@@ -52,4 +61,5 @@
     <a href="#">AGB</a>
     <a href="#">Datenschutzerklärung</a>
 </footer>
+
 </html>
