@@ -11,42 +11,49 @@
 </head>
 
 <body>
-    <h1>Portfolio</h1>
     <!--Einleitender Willkommenstext mit Bild und Verlinkungen-->
     <main>
-        <img id="profilbild" src="./images/Profilbild.png" alt="Selbstporträt in schwarzweiß mit Namen rechts">
-        <p>Hey, ich bin Simon! <br> <span class="farbig">UX-Designer</span> in Ausbildung und
-            Werkstudent bei der <span class="farbig">Isabellenhütte</span></p>
-        <!--Social Abschnitt mit Kontakt Button und LinkedIn Profil-->
-        <div id="social">
-            <div class="gruppe">
-                <p>#GernePerDU</p>
-                <a href="contact.html" role="button" aria-label="Kontakt aufnehmen">Kontakt</a>
+        <h1>Portfolio</h1>
+        <section id="profil">
+            <img id="profilbild" src="./images/Profilbild.png" alt="Selbstporträt in schwarzweiß mit Namen rechts">
+            <p>Hey, ich bin Simon! <br> <span class="farbig">UX-Designer</span> in Ausbildung und
+                Werkstudent bei der <span class="farbig">Isabellenhütte</span></p>
+
+            <!--Social Abschnitt mit Kontakt Button und LinkedIn Profil-->
+            <div id="social">
+                <div class="gruppe">
+                    <p>#GernePerDU</p>
+                    <a href="contact.html" role="button" aria-label="Kontakt aufnehmen">Kontakt</a>
+                </div>
+
+                <div class="gruppe">
+                    <a href="https://www.linkedin.com/in/simon-debus-ux/" target="_blank"
+                        rel="noopener noreferrer"><strong>Lass uns vernetzen!</strong><i class="fab fa-linkedin"
+                            style="font-size: 2em; color: #0A66C2;" aria-label="Zu meinem LinkedIn Account"></i>
+                    </a>
+                </div>
             </div>
-            <div class="gruppe">
-                <a href="https://www.linkedin.com/in/simon-debus-ux/" target="_blank"
-                    rel="noopener noreferrer"><strong>Lass uns vernetzen!</strong><i class="fab fa-linkedin"
-                        style="font-size: 2em; color: #0A66C2;" aria-label="Zu meinem LinkedIn Account"></i>
+        </section>
+
+        <!--Klickbare Navigations-Karten - Text auf Bild-->
+        <section id="ctaflex">
+            <div class="teaser">
+                <a href="projects.html" aria-label="Zu Projekte und Erfahrung">
+                    <img src="./images/Projekte_Teaser.jpeg" alt="UX Prototyp und Wireframing Prozess und Konzeption">
+                    <h2>Projekte &amp Erfahrung</h2>
                 </a>
             </div>
-        </div>
+
+            <div class="teaser">
+                <a href="music_playlists.html" aria-label="Zu Musik und Playlists">
+                    <img src="./images/Musik_Teaser.jpeg" alt="Symbol für die Musik- oder Videowiedergabeleiste.">
+                    <h2>Musik &amp Playlists</h2>
+                </a>
+            </div>
+        </section>
     </main>
-    <!--Klickbare Navigations-Karten - Text auf Bild-->
-    <div id="ctaflex">
-        <section class="teaser">
-            <a href="projects.html" aria-label="Zu Projekte und Erfahrung">
-                <img src="./images/Projekte_Teaser.jpeg" alt="UX Prototyp und Wireframing Prozess und Konzeption">
-                <h2>Projekte &amp Erfahrung</h2>
-            </a>
-        </section>
-        <section class="teaser">
-            <a href="music_playlists.html" aria-label="Zu Musik und Playlists">
-                <img src="./images/Musik_Teaser.jpeg" alt="Symbol für die Musik- oder Videowiedergabeleiste.">
-                <h2>Musik &amp Playlists</h2>
-            </a>
-        </section>
-    </div>
 </body>
+
 <footer>
     &copy;2025 Alle Rechte vorbehalten
     <a href="#">Impressum</a>
