@@ -1,57 +1,141 @@
 /* Allgemeingültige Formatierungen */
-html, body{
-    margin: 0;
-    padding: 0;        /* Standardabstände entfernen, für durchgängige Border */
+html,
+body {
     width: 100%;
+    /* Standardabstände entfernen, für durchgängige Border (z.B. im Footer */
     background-color: #F8F8F8;
 }
 
-footer{
+footer {
     display: flex;
-    justify-content: space-around;  
+    justify-content: space-around;
     border-top: 0.1rem solid;
-    border-color: #e26105;    
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    border-color: #e26105;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     flex-wrap: wrap;
+    row-gap: 1rem;
 }
 
-footer a{
+footer a {
     text-decoration: none;
     color: #252525;
     margin-right: 1rem;
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
-/* Akzente setzen mit dem "Span" Element */
-.farbig{
-    color: #e26105;
+/*index.html Formatierungen*/
+#portfolio {
+    font-family: "Hepta-Slab";
+    font-weight: 200;
+    text-align: center;
+    font-size: 5em;
 }
 
-/* Homepage Formatierungen*/
-#ctaflex{
+.align {
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none; 
 }
 
-.teaser img{
-    object-fit: cover;
+/*Profilsektion Größen und Abstände festlegen*/
+#profil {
+    height: 70vh;
+    border-radius: 0% 30px 30px 30px;
+    background-color: #FEC267;
+    padding-block-start: 2rem;
+    width: 80%;
+}
+
+#profilbild {
+    max-width: 100%;
+    margin-left: 7px;
+}
+
+/* Social Abschnitt Abstände */
+#social {
     width: 100%;
-    height: 100%;
-    position: absolute;  
-    filter: brightness(60%); 
+    background-color: #ffebdc;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.teaser a{
+/*Anordnung LinkedIn Link + Text nebeneinander*/
+#linkedin-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #252525;
+}
+
+#social a {
     text-decoration: none;
 }
 
-.teaser{
-    width: 400px;
-    height: 400px;
+.align p {
+    font-family: "nunito";
+    font-weight: 700;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/* Kontakt Button Formatierung */
+#social [role="button"] {
+    border: 0.1rem solid;
+    border-color: #e26105;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    font-family: "nonito";
+    padding: 0.6rem;
+    border-radius: 20px;
+    font-weight: 200;
+    font-size: 1.2em;
+    background-color: #f8f8f8;
+    color: #252525;
+}
+
+/* Akzente im Text setzen mit dem "Span" Element*/
+.farbig {
+    color: #24512e;
+    font-size: 1.1em;
+}
+
+
+#ctaflex {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+/*Bild in den Hintergrund & Größe festlegen*/
+.teaser img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/*Link Unterstriche entfernen*/
+.teaser a {
+    text-decoration: none;
+}
+
+/*div Abstände und Größe der Teaser festlegen*/
+.teaser {
+    width: 80vw;
+    height:40vh;
     border-radius: 30px 30px 0px 0px;
     margin-bottom: 4rem;
     position: relative;
@@ -60,71 +144,18 @@ footer a{
     justify-content: center;
 }
 
-/* Text vor dem Bild platzieren und formatieren */
-.teaser h2{
+/* Text Projekte & Erfahrung + Musik & Playlists vor dem Bild platzieren und formatieren */
+.teaser h2 {
     position: relative;
-    z-index: 1;             
-    text-align: center;
-    color:#f7f7f7;
-    font-size: 1.8rem;
-    background-color: #252525;
-    border-radius: 30px 0 0 0 ;
+    z-index: 1;
+    text-align: start;
+    color: #f7f7f7;
+    font-family: "Hepta-Slab";
+    font-weight: 200;
+    background-color: #24512e;
     margin-top: 0;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    margin-right: 3rem;
+    padding-left: 3rem;
+    font-size: 2em;
 }
-/* Social Abschnitt Abstände */
-#social{
-    width: 100%;
-    background-color: rgb(230, 234, 234);
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 3rem;
-    margin-bottom: 4rem;  
-}
-
-/* Kontakt Button Formatierung */
-#social [role="button"]{
-    border: 0.1rem solid;
-    border-color: #e26105;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    background-color:rgb(228, 228, 228);
-    color: #252525;
-}
-/* Elemente übereinander platzieren + Abstände */
-.gruppe{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-}
-
-/* Mobile First Responsive Anpassungen*/
-@media (max-width: 768px) {
-/* Homepage */
-    body{
-        font-size: 1.25rem;
-    }
-    main{
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #header h1 {
-        line-height: 1.2;
-        text-align: center;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-}
-
-

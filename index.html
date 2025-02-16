@@ -13,27 +13,32 @@
 <body>
     <!--Einleitender Willkommenstext mit Bild und Verlinkungen-->
     <main>
-        <h1>Portfolio</h1>
-        <section id="profil">
-            <img id="profilbild" src="./images/Profilbild.png" alt="Selbstporträt in schwarzweiß mit Namen rechts">
-            <p>Hey, ich bin Simon! <br> <span class="farbig">UX-Designer</span> in Ausbildung und
-                Werkstudent bei der <span class="farbig">Isabellenhütte</span></p>
+        <h1 id="portfolio">Portfolio</h1>
+        <div class="align"> <!--Hinzugefügt um die Profil Section zu zentrieren-->
+            <section id="profil">
 
-            <!--Social Abschnitt mit Kontakt Button und LinkedIn Profil-->
-            <div id="social">
-                <div class="gruppe">
+                <div class="align">
+                    <img id="profilbild" src="./images/Profilbild.png"
+                        alt="Selbstporträt in schwarzweiß mit Namen rechts">
+                    <p>Hey, ich bin Simon! <br> <span class="farbig">UX-Designer</span> in Ausbildung und
+                        Werkstudent bei der <span class="farbig">Isabellenhütte</span></p>
+                </div>
+
+                <!--Social Abschnitt mit Kontakt Button und LinkedIn Profil-->
+                <div id="social">
                     <p>#GernePerDU</p>
-                    <a href="contact.html" role="button" aria-label="Kontakt aufnehmen">Kontakt</a>
-                </div>
 
-                <div class="gruppe">
-                    <a href="https://www.linkedin.com/in/simon-debus-ux/" target="_blank"
-                        rel="noopener noreferrer"><strong>Lass uns vernetzen!</strong><i class="fab fa-linkedin"
-                            style="font-size: 2em; color: #0A66C2;" aria-label="Zu meinem LinkedIn Account"></i>
+                    <a href="contact.html" role="button" aria-label="Kontakt aufnehmen">Kontakt</a>
+
+                    <a href="https://www.linkedin.com/in/simon-debus-ux/" target="_blank" rel="noopener noreferrer"
+                        id="linkedin-link">
+                        <p>Lass uns vernetzen!</p><i class="fab fa-linkedin" style="font-size: 2em; color: #0A66C2;"
+                            aria-label="Zu meinem LinkedIn Account"></i>
                     </a>
+
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!--Klickbare Navigations-Karten - Text auf Bild-->
         <section id="ctaflex">
