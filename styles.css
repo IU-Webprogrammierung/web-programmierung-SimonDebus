@@ -15,6 +15,7 @@ footer {
     padding-bottom: 3rem;
     flex-wrap: wrap;
     row-gap: 1rem;
+    max-width: 1920px;
 }
 
 footer a {
@@ -37,15 +38,16 @@ footer a {
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 /*Profilsektion Größen und Abstände festlegen*/
 #profil {
-    height: 70vh;
+    height: 100%;
     border-radius: 0% 30px 30px 30px;
     background-color: #FEC267;
     padding-block-start: 2rem;
-    width: 80%;
+    width: 75%;
 }
 
 #profilbild {
@@ -85,6 +87,8 @@ footer a {
     font-weight: 700;
     font-size: 1.3em;
     text-align: center;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 /* Kontakt Button Formatierung */
@@ -110,21 +114,22 @@ footer a {
     font-size: 1.1em;
 }
 
-
 #ctaflex {
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
 }
 
 /*Bild in den Hintergrund & Größe festlegen*/
 .teaser img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 750px;
+    height: 500px;
     position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    object-position: center;
 }
 
 /*Link Unterstriche entfernen*/
@@ -134,14 +139,12 @@ footer a {
 
 /*div Abstände und Größe der Teaser festlegen*/
 .teaser {
-    width: 80vw;
-    height:40vh;
+    width: 70vw;
+    height: 40vh;
     border-radius: 30px 30px 0px 0px;
     margin-bottom: 4rem;
     position: relative;
     overflow: hidden;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Text Projekte & Erfahrung + Musik & Playlists vor dem Bild platzieren und formatieren */
@@ -158,4 +161,58 @@ footer a {
     padding-bottom: 0.5rem;
     padding-left: 3rem;
     font-size: 2em;
+    box-sizing: border-box;
+    max-width: 750px;
+}
+
+/*Inhalte unter 360px und über 1921px ausblenden*/
+@media (max-width: 359px) {
+    html {
+        display: none;
+    }
+}
+
+@media (min-width: 1921px) {
+    html {
+        display: none
+    }
+}
+
+/*Breakpoint bei 1024px*/
+@media (min-width: 1024px) {
+    #mainportfolio {
+        display: flex;
+        gap: 5rem;
+        max-width: 1920px;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #portfolio {
+        position: relative;
+        font-size: 6.5em;
+        transform: translateX(260%);
+        top: 0;
+        display: none;
+    }
+
+    #profil {
+        width: 40vw;
+        min-height: 90vh;
+        max-width: 60vh;
+        margin-top: 3rem;
+        margin-left: 13rem;
+    }
+
+    #ctaflex {
+        margin-top: 8rem;
+    }
+
+    .teaser {
+        width: 40vw;
+        max-width: 750px;
+        min-height: 40%;
+    }
+
 }
