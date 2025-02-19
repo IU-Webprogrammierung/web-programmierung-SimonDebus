@@ -214,5 +214,51 @@ footer a {
         max-width: 750px;
         min-height: 40%;
     }
+    
+    /*Styling für die vertikale Desktop Navigation*/
+    .nav {
+        position: fixed;
+        /* Volle Höhe des Viewports abzüglich Höhe des Footers damit die Navigationsleiste beim scrollen nicht über dem Footer liegt*/
+        height: calc(100vh - 115px);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .nav ul {
+        list-style: none;
+        margin: 0;
+        margin-left: 2rem;
+        padding: 0;
+        /* Vertikale Textausrichtung und umdrehen*/
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        /*Umbruch der Navigationspunkte bei zu geringer Bildschirmhöhe*/
+        display: flex;
+        flex-wrap: wrap-reverse;
+        row-gap: 20px;
+    }
+
+    .nav li {
+        margin: 1rem;
+    }
+    
+    /*Textformatierung & Font*/
+    .nav a {
+        text-decoration: none;
+        color: #252525;
+        font-family: "Hepta-Slab";
+        font-size: 1.6em;
+        transition: color 0.5s ease;
+    }
+
+     /* Hover-Effekt */
+    .nav a:hover {
+        color: #e26105;
+       
+    }
 }
+
+
