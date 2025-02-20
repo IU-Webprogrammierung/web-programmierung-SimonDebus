@@ -2,10 +2,11 @@
 html,
 body {
     width: 100%;
-    /* Standardabstände entfernen, für durchgängige Border (z.B. im Footer */
+    /* Standardabstände entfernen, für durchgängige Border (z.B. im Footer)*/
     background-color: #F8F8F8;
 }
 
+/*Globaler Footer - Formatierungen*/
 footer {
     display: flex;
     justify-content: space-around;
@@ -39,6 +40,7 @@ footer a {
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-width: 50vw fit-content;
 }
 
 /*Profilsektion Größen und Abstände festlegen*/
@@ -48,6 +50,7 @@ footer a {
     background-color: #FEC267;
     padding-block-start: 2rem;
     width: 75%;
+    min-width: 50vw fit-content;
 }
 
 #profilbild {
@@ -82,13 +85,15 @@ footer a {
     text-decoration: none;
 }
 
+/*Eiinleitende Kurzvorstellung formatieren*/
 .align p {
     font-family: "nunito";
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.6em;
     text-align: center;
     overflow-wrap: break-word;
     max-width: 100%;
+    line-height: 35px;
 }
 
 /* Kontakt Button Formatierung */
@@ -100,20 +105,22 @@ footer a {
     margin-bottom: auto;
     text-decoration: none;
     font-family: "nonito";
-    padding: 0.6rem;
+    padding: 0.8rem;
     border-radius: 20px;
     font-weight: 200;
     font-size: 1.2em;
     background-color: #f8f8f8;
     color: #252525;
+    font-family: "Hepta-Slab";
 }
 
 /* Akzente im Text setzen mit dem "Span" Element*/
 .farbig {
     color: #24512e;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
+/*Navigationsteaser übereinander positionieren & Abstände*/
 #ctaflex {
     margin-top: 4rem;
     display: flex;
@@ -140,7 +147,7 @@ footer a {
 /*div Abstände und Größe der Teaser festlegen*/
 .teaser {
     width: 70vw;
-    height: 40vh;
+    height: 400px;
     border-radius: 30px 30px 0px 0px;
     margin-bottom: 4rem;
     position: relative;
@@ -180,6 +187,9 @@ footer a {
 
 /*Breakpoint bei 1024px*/
 @media (min-width: 1024px) {
+
+    /*Responsive Anpassungen für Bildschirmgrößen ab 1024px
+       Index.html*/
     #mainportfolio {
         display: flex;
         gap: 5rem;
@@ -187,32 +197,34 @@ footer a {
         flex-wrap: nowrap;
         width: 100%;
         justify-content: center;
+        max-height: 1200px;
     }
 
     #portfolio {
-        position: relative;
-        font-size: 6.5em;
-        transform: translateX(260%);
-        top: 0;
-        display: none;
+        position: absolute;
+        font-size: 6.6em;
+        transform: translateX(77%);
+        letter-spacing: 3px;
+        top: 80px;
     }
 
     #profil {
-        width: 40vw;
-        min-height: 90vh;
-        max-width: 60vh;
+        min-height: 900px;
         margin-top: 3rem;
-        margin-left: 13rem;
+        margin-left: 10rem;
+        margin-bottom: 3rem;
     }
 
     #ctaflex {
-        margin-top: 8rem;
+        margin-top: 12rem;
+        max-height: 850px;
+        min-height: 850px;
+        margin-right: 3rem
     }
 
     .teaser {
         width: 40vw;
         max-width: 750px;
-        min-height: 40%;
+        min-height: 350px;
     }
-
 }
