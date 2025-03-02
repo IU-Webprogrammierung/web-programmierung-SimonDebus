@@ -165,19 +165,6 @@ footer a {
     max-width: 750px;
 }
 
-/*Inhalte unter 360px und über 1921px ausblenden*/
-@media (max-width: 359px) {
-    html {
-        display: none;
-    }
-}
-
-@media (min-width: 1921px) {
-    html {
-        display: none
-    }
-}
-
 /*Breakpoint bei 1024px*/
 @media (min-width: 1024px) {
     #mainportfolio {
@@ -215,4 +202,142 @@ footer a {
         min-height: 40%;
     }
 
+}
+
+/*contact.html Formatierungen*/
+#mainkontakt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#einleitungstext {
+    width: 80vw;
+    max-width: 600px;
+    text-align: left;
+}
+
+#einleitungstext p {
+    line-height: 23px;
+}
+
+#dropdownmenü {
+    margin-left: 1rem
+}
+
+#kontakt {
+    font-family: "Hepta-Slab";
+    font-weight: 200;
+    font-size: 4em;
+    text-align: left;
+}
+
+#anliegen {
+    margin-bottom: 2rem;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+/*Persönliche Informationen Fieldset formatierungen*/
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    max-width: 600px;
+    height: 270px;
+    border-color: #24512e;
+}
+
+/*Überschrift Fieldset*/
+legend {
+    margin-bottom: 15px;
+    font-family: "Hepta-Slab";
+    font-size: 1.2em;
+    color: #24512e;
+}
+
+/*Beschriftungen und Textfelder übereinander positionieren*/
+.eingabefeld {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+    font-size: 0.9em;
+}
+
+#vorname {
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 250px;
+}
+
+#nachname {
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 250px;
+}
+
+#email {
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 250px;
+}
+
+/*Nachricht-Feld formatierungen*/
+#kontaktnachricht {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 80vw;
+    max-width: 600px;
+}
+
+#nachricht {
+    max-width: 400px;
+    height: 100px;
+    resize: none;
+    line-height: 20px;
+}
+
+/*Absenden Button formatieren*/
+#absenden {
+    border-radius: 30px;
+    padding: 10px;
+    width: 100px;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #e26105;
+    font-family: "nunito";
+    font-size: 1.1em;
+}
+
+/*Eingebettete Karte formatieren*/
+#standort {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+}
+
+#karte {
+    height: 100%;
+    width: 100%;
+}
+
+#standort-karte {
+    border: 0.1rem solid;
+    border-color: #e26105;
+    border-radius: 30px;
+    max-width: 600px;
+    width: 80vw;
+    max-width: 630px;
+    height: 40vh;
+    overflow: hidden;
 }
