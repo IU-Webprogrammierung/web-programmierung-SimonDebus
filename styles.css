@@ -165,19 +165,6 @@ footer a {
     max-width: 750px;
 }
 
-/*Inhalte unter 360px und über 1921px ausblenden*/
-@media (max-width: 359px) {
-    html {
-        display: none;
-    }
-}
-
-@media (min-width: 1921px) {
-    html {
-        display: none
-    }
-}
-
 /*Breakpoint bei 1024px*/
 @media (min-width: 1024px) {
     #mainportfolio {
@@ -214,7 +201,7 @@ footer a {
         max-width: 750px;
         min-height: 40%;
     }
-    
+
     /*Styling für die vertikale Desktop Navigation*/
     .nav {
         position: fixed;
@@ -244,7 +231,7 @@ footer a {
     .nav li {
         margin: 1rem;
     }
-    
+
     /*Textformatierung & Font*/
     .nav a {
         text-decoration: none;
@@ -254,11 +241,110 @@ footer a {
         transition: color 0.5s ease;
     }
 
-     /* Hover-Effekt */
+    /* Hover-Effekt */
     .nav a:hover {
         color: #e26105;
-       
+    }
+
+    /*Checkbox für die mobile Navigation ab 1024px ausblenden */
+    #menu-toggle {
+        display: none;
     }
 }
 
 
+@media (max-width: 1023px) {
+
+    /*Styling für das Hamburger Menü*/
+    /* Position des Hamburger Menüs*/
+    .menu-container {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+    }
+
+    /* Verstecktes Checkbox-Element */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Hamburger Icon */
+    .menu-button {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        width: 35px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    /*Span Elemente zum Hamburger Icon stylen*/
+    .menu-button span {
+        width: 35px;
+        height: 4px;
+        background: #252525;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Menüleiste */
+    .nav {
+        position: fixed;
+        top: 0;
+        /* Versteckt am Anfang */
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #ffffff;
+        padding-top: 80px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    /* Menüeinträge */
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav ul li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        color: #252525;
+        font-family: "Hepta-Slab";
+        font-size: 1.2em;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .nav ul li a:active {
+        color: #e26105;
+    }
+
+    /* Menü öffnen */
+    #menu-toggle:checked~.nav {
+        right: 0;
+    }
+
+    /* Hamburger-Icon bei Klick zu Kreuz transformieren */
+    /*1. Span Balken rotieren*/
+    #menu-toggle:checked+.menu-button span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    /*2. Span Balken ausblenden*/
+    #menu-toggle:checked+.menu-button span:nth-child(2) {
+        opacity: 0;
+    }
+     /*3. Span Balken in die entgegengesetzte Richtung rotieren*/
+    #menu-toggle:checked+.menu-button span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+}
