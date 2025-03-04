@@ -190,9 +190,9 @@ footer a {
     #portfolio {
         position: absolute;
         font-size: 6.6em;
-        transform: translateX(77%);
+        transform: translateX(73%);
         letter-spacing: 3px;
-        top: 80px; 
+        top: -12px;
     }
 
     #profil {
