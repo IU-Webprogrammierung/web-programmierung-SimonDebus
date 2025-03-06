@@ -176,7 +176,7 @@ footer a {
 #einleitungstext {
     width: 80vw;
     max-width: 600px;
-    text-align: left;
+    padding-bottom: 2rem;
 }
 
 #einleitungstext p {
@@ -184,20 +184,22 @@ footer a {
     font-family: "Nunito";
 }
 
-#kontaktformular{
-    width: 80vw ;
+#kontaktformular {
+    width: 80vw;
     max-width: 600px;
 }
+
 #dropdownmenü {
     font-family: "Nunito"
 }
 
+/*Überschrift h1*/
 #kontakt {
-   font-family: "Hepta Slab";
+    font-family: "Hepta Slab";
     font-weight: 400;
     font-size: 4em;
-    text-align: left;
     color: #24512e;
+    margin-bottom: 20px;
 }
 
 #anliegen {
@@ -210,7 +212,6 @@ footer a {
 fieldset {
     display: flex;
     flex-direction: column;
-    width: 80vw;
     max-width: 600px;
     height: 300px;
     border-color: #24512e;
@@ -222,8 +223,8 @@ fieldset {
 label[for][class="form-label"]::after {
     content: " *";
     color: #b32525;
-  }
-  
+}
+
 /*Überschrift Fieldset*/
 legend {
     margin-bottom: 15px;
@@ -291,12 +292,12 @@ legend {
     font-size: 1.1em;
 }
 
-#standorttext{
+#standorttext {
     width: 80vw;
     max-width: 600px;
 }
 
-#standorttext p{
+#standorttext p {
     margin: 4px;
     font-family: "Nunito";
     font-size: 1.2em;
@@ -306,11 +307,10 @@ legend {
 #standort {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 6rem;
     margin-top: 3rem;
 }
+
 .fa-map-pin {
     color: #d13131;
 }
@@ -371,6 +371,52 @@ legend {
         min-height: 40%;
     }
 
+    /*Kontaktformular*/
+    #mainkontakt {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        margin-bottom: 5rem;
+        max-width: 1920px;
+    }
+
+    #kontakt {
+        margin-bottom: 5rem;
+    }
+
+    #einleitungstext {
+        width: 40vw;
+        max-width: 420px;
+    }
+
+    #standorttext {
+        width: 40vw;
+    }
+
+    fieldset {
+        width: 35vw;
+        max-width: 450px;
+    }
+
+    #alignkontakt {
+        width: fit-content;
+        margin-left: 3rem;
+    }
+
+    #kontaktformular {
+        width: 40vw;
+    }
+
+    #standort {
+        width: 40vw;
+        margin-bottom: 0;
+        margin-top: 0;
+        height: 610px;
+        margin-left: 2rem;
+    }
+
+    #standort-karte {
+        width: 40vw;
+    }
+
 }
-
-
