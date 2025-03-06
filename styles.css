@@ -172,6 +172,175 @@ footer a {
     max-width: 750px;
 }
 
+/*contact.html Formatierungen*/
+#mainkontakt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#einleitungstext {
+    width: 80vw;
+    max-width: 600px;
+    padding-bottom: 2rem;
+}
+
+#einleitungstext p {
+    line-height: 23px;
+    font-family: "Nunito";
+}
+
+#kontaktformular {
+    width: 80vw;
+    max-width: 600px;
+}
+
+#dropdownmenü {
+    font-family: "Nunito"
+}
+
+/*Überschrift h1*/
+#kontakt {
+    font-family: "Hepta Slab";
+    font-weight: 400;
+    font-size: 4em;
+    color: #24512e;
+    margin-bottom: 20px;
+}
+
+#anliegen {
+    margin-bottom: 2rem;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+/*Persönliche Informationen Fieldset formatierungen*/
+fieldset {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    height: 300px;
+    border-color: #24512e;
+    font-family: "Nunito";
+    background-color: #ffffff;
+}
+
+/*Sternchen hinter jedem Pflichtfeld im Formular platzieren*/
+label[for][class="form-label"]::after {
+    content: " *";
+    color: #b32525;
+}
+
+/*Überschrift Fieldset*/
+legend {
+    margin-bottom: 15px;
+    font-family: "Hepta Slab";
+    font-size: 1.2em;
+    color: #24512e;
+}
+
+/*Beschriftungen und Textfelder übereinander positionieren*/
+.eingabefeld {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+}
+
+#vorname {
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 250px;
+}
+
+#nachname {
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 250px;
+}
+
+#email {
+    border-radius: 30px;
+    padding: 10px;
+    max-width: 250px;
+}
+
+/*Nachricht-Feld formatierungen*/
+#kontaktnachricht {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 80vw;
+    max-width: 600px;
+    font-family: "Nunito";
+}
+
+#nachricht {
+    max-width: 400px;
+    height: 100px;
+    resize: none;
+    line-height: 20px;
+}
+
+/*Absenden Button formatieren*/
+#absenden {
+    border-radius: 30px;
+    padding: 10px;
+    width: 140px;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #e26105;
+    font-family: "Hepta Slab";
+    font-size: 1.1em;
+}
+
+#standorttext {
+    width: 80vw;
+    max-width: 600px;
+}
+
+#standorttext p {
+    margin: 4px;
+    font-family: "Nunito";
+    font-size: 1.2em;
+}
+
+/*Eingebettete Karte formatieren*/
+#standort {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+}
+
+.fa-map-pin {
+    color: #d13131;
+}
+
+#karte {
+    height: 100%;
+    width: 100%;
+}
+
+#standort-karte {
+    border: 0.1rem solid;
+    border-color: #e26105;
+    border-radius: 30px;
+    max-width: 600px;
+    width: 80vw;
+    height: 40vh;
+    min-height: 400px;
+    max-height: 400px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+
 /*Breakpoint bei 1024px*/
 @media (min-width: 1024px) {
 
@@ -359,6 +528,54 @@ footer a {
     /*3. Span Balken in die entgegengesetzte Richtung rotieren*/
     #menu-toggle:checked+.menu-button span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /*Kontaktformular*/
+    #mainkontakt {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        margin-bottom: 5rem;
+        max-width: 1920px;
+    }
+
+    #kontakt {
+        margin-bottom: 5rem;
+    }
+
+    #einleitungstext {
+        width: 40vw;
+        max-width: 420px;
+    }
+
+    #standorttext {
+        width: 40vw;
+    }
+
+    fieldset {
+        width: 35vw;
+        max-width: 450px;
+    }
+
+    #alignkontakt {
+        width: fit-content;
+        margin-left: 3rem;
+    }
+
+    #kontaktformular {
+        width: 40vw;
+    }
+
+    #standort {
+        width: 40vw;
+        margin-bottom: 0;
+        margin-top: 0;
+        height: 610px;
+        margin-left: 2rem;
+    }
+
+    #standort-karte {
+        width: 40vw;
     }
 
 }

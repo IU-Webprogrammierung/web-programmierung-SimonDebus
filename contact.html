@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <!--Einbindung der Icon Bibliothek von Font Awesome-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -30,70 +35,86 @@
         </div>
     </header>
 
-    <main>
-        <h1>Kontakt</h1>
-        <p>Ob Sie ein Projekt im Kopf haben, Fragen zu meinem Portfolio haben oder einfach nur in Kontakt treten möchten
-            – zögern Sie nicht, mir eine Nachricht zu schicken. <span aria-hidden="true"><i
-                    class="fas fa-envelope"></i></span></p>
+    <main id="mainkontakt">
+       <div id="alignkontakt">
+        <div id="einleitungstext">
+            <h1 id="kontakt">Kontakt</h1>
+            <p>Ob Sie ein Projekt im Kopf haben, Fragen zu meinem Portfolio haben oder einfach nur in Kontakt treten
+                möchten – zögern Sie nicht, mir eine Nachricht zu schicken.</p>
+        </div>
 
         <!--Kontaktformular mit Dropdown, Freitextfeldern und Button zum Absenden |
          Das Absenden und Ausspielen der Daten des Formulars mittels PHP ist im Rahmen dieses Projekts jedoch nicht vorgesehen -->
         <!--Dropdown Menü zur Auswahl des Anliegens-->
         <form id="kontaktformular" action="#" method="post">
 
-            <label for="dropdown">
-                <h2>Womit kann ich Ihnen helfen?</h2>
-            </label>
+            <div id="dropdownmenü">
+                <label for="anliegen">
+                    <p>Womit kann ich Ihnen helfen?</p>
+                </label>
 
-            <select name="anliegen" id="anliegen">
-                <option value="projektanfrage">Projektanfrage/Zusammenarbeit</option>
-                <option value="webdesign">Webdesign</option>
-                <option value="fragen">Fragen zu meinem Portfolio</option>
-                <option value="feedback">Feedback oder Verbesserungsvorschläge</option>
-                <option value="sonstiges">Sonstiges</option>
-            </select>
-
+                <select name="anliegen" id="anliegen" aria-label="Wählen Sie ihr Anliegen aus">
+                    <option value="" disabled selected>Bitte wählen...</option>
+                    <option value="projektanfrage">Projektanfrage/Zusammenarbeit</option>
+                    <option value="webdesign">Webdesign</option>
+                    <option value="fragen">Fragen zu meinem Portfolio</option>
+                    <option value="feedback">Feedback oder Verbesserungsvorschläge</option>
+                    <option value="sonstiges">Sonstiges</option>
+                </select>
+            </div>
             <!--Pflichtfelder – Vorname, Nachname, Email und Nachricht-->
             <fieldset>
                 <legend>Persönliche Informationen</legend>
-
-                <label for="vorname">Vorname*</label>
-                <input type="text" name="vorname" id="vorname" placeholder="Max" required>
-
-                <label for="nachname">Nachname*</label>
-                <input type="text" name="nachname" id="nachname" placeholder="Mustermann" required>
-
-                <label for="email">E-Mail*</label>
-                <input type="email" name="email" id="email" placeholder="email@example.com" required>
+                <div class="eingabefeld">
+                    <label class="form-label" for="vorname">Vorname</label>
+                    <input type="text" name="vorname" id="vorname" placeholder="Max" required autocomplete="given-name">
+                </div>
+                <div class="eingabefeld">
+                    <label class="form-label" for="nachname">Nachname</label>
+                    <input type="text" name="nachname" id="nachname" placeholder="Mustermann" required
+                        autocomplete="family-name">
+                </div>
+                <div class="eingabefeld">
+                    <label class="form-label" for="email">E-Mail</label>
+                    <input type="email" name="email" id="email" placeholder="email@example.com" required
+                        autocomplete="email">
+                </div>
             </fieldset>
 
             <!--Nachricht und Button zum Absenden-->
-            <div>
-                <label for="nachricht">Ihre Nachricht*</label>
+            <div id="kontaktnachricht">
+                <label class="form-label" for="nachricht">Ihre Nachricht</label>
                 <textarea name="nachricht" id="nachricht" required></textarea>
             </div>
 
-            <input type="submit" value="Absenden" aria-label="Formular absenden">
+            <input id="absenden" type="submit" value="Absenden" aria-label="Formular absenden">
         </form>
+    </div>
+
+        <!--Section mit Standort und eingebetteter Karte-->
+        <section id="standort">
+            <div id="standorttext">
+                <p><i class="fas fa-map-pin"></i> Siegen,</p>
+                <p>Nordrhein-Westfalen</p>
+            </div>
+            <div id="standort-karte">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80553.26614156346!2d7.942396015781122!3d50.88135079650416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc1c91e71085a7%3A0x3dc2391d0cdbdbc7!2sSiegen!5e0!3m2!1sde!2sde!4v1738186295369!5m2!1sde!2sde"
+                    id="karte" title="Standort Karte" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
     </main>
 
-    <!--Section mit Standort und eingebetteter Karte-->
-    <section id="standort">
-        <h2>📍Siegen, Nordrhein-Westfalen</h2>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80553.26614156346!2d7.942396015781122!3d50.88135079650416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bc1c91e71085a7%3A0x3dc2391d0cdbdbc7!2sSiegen!5e0!3m2!1sde!2sde!4v1738186295369!5m2!1sde!2sde"
-            title="Standort Karte" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </section>
+    <footer>
+        &copy; 2025 Simon Debus
+        <a href="#">Impressum</a>
+        <a href="#">AGB</a>
+        <a href="#">Datenschutzerklärung</a>
+    </footer>
 
 </body>
 
-<footer>
-    &copy 2025 Simon Debus
-    <a href="#">Impressum</a>
-    <a href="#">AGB</a>
-    <a href="#">Datenschutzerklärung</a>
-</footer>
 
 </html>
