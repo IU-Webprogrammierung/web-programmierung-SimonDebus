@@ -340,6 +340,128 @@ legend {
     margin-top: 1rem;
 }
 
+/*music_playlists.html Styles*/
+/*Main Elemente untereinander platzieren in Flexbox*/
+#mainmusik{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1920px;
+}
+
+/*Breite des Einleitungstext*/
+#einleitungstextmusik{
+    width: 80vw;
+    padding-top: 5rem;
+    max-width: 800px;
+}
+
+/*Überschrift und Einleitung formatieren*/
+#einleitungstextmusik h1{
+    color: #e26105;
+    font-family: "Hepta Slab";
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#einleitungstextmusik p{
+    font-family: "Nunito";
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.fa-circle-play{
+    color: #252525;
+}
+
+/*Flex Container mit Bild, Titel, Spotify Logo und Playlist*/
+.flexplaylist {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    align-content: flex-start;
+    width: 80vw;
+    max-width: 800px;
+}
+
+.genre {
+    height: 250px;
+    border-radius: 30px 0px 0px 0px;
+    overflow: hidden;
+    flex: 2;
+}
+
+/*Überschrift der Genres über dem Bild positionieren und stylen*/
+.genre h2 {
+    z-index: 1;
+    color: #ffffff;
+    font-family: "Hepta Slab";
+    font-weight: 200;
+    background-color: #24512e;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 3rem;
+    font-size: 32px;
+    box-sizing: border-box;
+    height: 50px;
+    padding-top: 5px;
+}
+
+/*Genre Bild stylen*/
+.genre img {
+    object-fit: cover;
+    width: 100%;
+    height: 190px;
+}
+
+/*Spotify Logo div Stylen – Border und Größe / Flexbox-Verhalten*/
+.spotifylogo {
+    margin-left: 1rem;
+    align-content: center;
+    height: 238px;
+    border: 1px solid;
+    border-color: #24512e;
+    border-radius: 0px 30px 0px 0;
+    flex: 1;
+  }
+  
+  /*Der Link als Flex-Container um Logo und Text untereinander zu platzieren*/
+  .spotifylogo a {
+    display: inline-flex;      
+    flex-direction: column;     
+    align-items: center;       
+    text-decoration: none;     
+    width: 100%;
+  }
+  
+  /* Icon-Styles */
+  .spotifylogo i {
+    font-size: 3em;      
+    color: #1ed760;      /* Spotify-Grün */
+    margin-bottom: 0.3em;
+    text-align: center;
+  }
+  
+  /* Text-Styles */
+  .spotifylogo p {
+    color: #24512e;     
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0;
+    text-align: center;
+  }
+
+  /*Größe und Flexbox-Verhalten der eingebetteten Playlist*/
+.embeddedplaylist {
+    width: 100%;
+    height: 170px;
+  }
+  
+ .embeddedplaylist iframe{
+    height: 200px;
+ }
 
 /*Breakpoint bei 1024px*/
 @media (min-width: 1024px) {
@@ -433,8 +555,8 @@ legend {
         display: none;
     }
 
-     /*Kontaktformular*/
-     #mainkontakt {
+    /*Kontaktformular*/
+    #mainkontakt {
         display: flex;
         flex-direction: row;
         width: 100vw;
@@ -578,6 +700,6 @@ legend {
         transform: translateY(-9px) rotate(-45deg);
     }
 
-   
+
 
 }
