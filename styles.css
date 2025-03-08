@@ -675,104 +675,162 @@ legend {
     #standort-karte {
         width: 40vw;
     }
+
+    /*Musik & Playlists Styles*/
+    /*Grid Template festlegen*/
+    #mainmusik {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 600px 550px ;
+        grid-template-areas:
+            "einleitung bandbericht"
+            "playlist1 bandbericht"
+            "playlist2 konzerte";
+        column-gap: 40px;
+        align-items: start;
+    }
+
+    /*Bereiche für die Elemente definieren*/
+    #einleitungstextmusik {
+        grid-area: einleitung;
+        width: 40vw;
+        margin-left: 8rem;
+        padding-top: 0;
+        align-self: center;
+        
+    }
+
+    .flexplaylist:nth-of-type(1) {
+        grid-area: playlist1;
+        width: 40vw;
+        margin-left: 8rem;
+        margin-top: 0;
+        align-self: center;
+     
+    }
+
+
+    .flexplaylist:nth-of-type(2) {
+        grid-area: playlist2;
+        width: 40vw;
+        margin-left: 8rem;
+        margin-top: 0;
+        padding-bottom: 4rem;
+   
+    }
+
+    #bandbericht {
+        grid-area: bandbericht;
+        width: 43vw;
+    }
+
+    #bandbericht h2{
+        margin-top: 0;
+    }
+
+    #konzerte {
+        grid-area: konzerte;
+        width: 40vw;
+        margin-top: 200px;
+    }
 }
 
-/*Styling für das Hamburger Menü*/
-@media (max-width: 1023px) {
+    /*Styling für das Hamburger Menü*/
+    @media (max-width: 1023px) {
 
-    /* Position des Hamburger Menüs*/
-    .menu-container {
-        position: fixed;
-        top: 30px;
-        right: 20px;
+        /* Position des Hamburger Menüs*/
+        .menu-container {
+            position: fixed;
+            top: 30px;
+            right: 20px;
+        }
+
+        /* Verstecktes Checkbox-Element */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Hamburger Icon */
+        .menu-button {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            width: 35px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /*Span Elemente zum Hamburger Icon stylen*/
+        .menu-button span {
+            width: 35px;
+            height: 4px;
+            background: #252525;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Menüleiste */
+        .nav {
+            position: fixed;
+            top: 0;
+            /* Versteckt am Anfang */
+            right: -250px;
+            width: 250px;
+            height: 100vh;
+            background: #ffffff;
+            padding-top: 80px;
+            transition: right 0.3s ease-in-out;
+        }
+
+        /* Menüeinträge */
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav ul li {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: #252525;
+            font-family: "Hepta-Slab";
+            font-size: 1.2em;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .nav ul li a:active {
+            color: #e26105;
+        }
+
+        /* Menü öffnen */
+        #menu-toggle:checked~.nav {
+            right: 0;
+        }
+
+        /* Hamburger-Icon bei Klick zu Kreuz transformieren */
+        /*1. Span Balken rotieren*/
+        #menu-toggle:checked+.menu-button span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        /*2. Span Balken ausblenden*/
+        #menu-toggle:checked+.menu-button span:nth-child(2) {
+            opacity: 0;
+        }
+
+        /*3. Span Balken in die entgegengesetzte Richtung rotieren*/
+        #menu-toggle:checked+.menu-button span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+
+
+
     }
-
-    /* Verstecktes Checkbox-Element */
-    #menu-toggle {
-        display: none;
-    }
-
-    /* Hamburger Icon */
-    .menu-button {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-        width: 35px;
-        height: 30px;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 10;
-    }
-
-    /*Span Elemente zum Hamburger Icon stylen*/
-    .menu-button span {
-        width: 35px;
-        height: 4px;
-        background: #252525;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    /* Menüleiste */
-    .nav {
-        position: fixed;
-        top: 0;
-        /* Versteckt am Anfang */
-        right: -250px;
-        width: 250px;
-        height: 100vh;
-        background: #ffffff;
-        padding-top: 80px;
-        transition: right 0.3s ease-in-out;
-    }
-
-    /* Menüeinträge */
-    .nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav ul li {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .nav ul li a {
-        text-decoration: none;
-        color: #252525;
-        font-family: "Hepta-Slab";
-        font-size: 1.2em;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .nav ul li a:active {
-        color: #e26105;
-    }
-
-    /* Menü öffnen */
-    #menu-toggle:checked~.nav {
-        right: 0;
-    }
-
-    /* Hamburger-Icon bei Klick zu Kreuz transformieren */
-    /*1. Span Balken rotieren*/
-    #menu-toggle:checked+.menu-button span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-
-    /*2. Span Balken ausblenden*/
-    #menu-toggle:checked+.menu-button span:nth-child(2) {
-        opacity: 0;
-    }
-
-    /*3. Span Balken in die entgegengesetzte Richtung rotieren*/
-    #menu-toggle:checked+.menu-button span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-
-
-}
