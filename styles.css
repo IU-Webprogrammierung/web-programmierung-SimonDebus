@@ -28,10 +28,11 @@ footer a {
 
 /*index.html Formatierungen*/
 #portfolio {
-    font-family: "Hepta-Slab";
-    font-weight: 200;
+    font-family: "Hepta Slab";
+    font-weight: 400;
+    color: #e26105;
     text-align: center;
-    font-size: 5em;
+    font-size: 80px;
 }
 
 .align {
@@ -87,9 +88,9 @@ footer a {
 
 /*Eiinleitende Kurzvorstellung formatieren*/
 .align p {
-    font-family: "nunito";
-    font-weight: 700;
-    font-size: 1.6em;
+    font-family: "Nunito";
+    font-weight: 400;
+    font-size: 24px;
     text-align: center;
     overflow-wrap: break-word;
     max-width: 100%;
@@ -97,21 +98,23 @@ footer a {
 }
 
 /* Kontakt Button Formatierung */
-#social [role="button"] {
+#kontaktbutton {
     border: 0.1rem solid;
     border-color: #e26105;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
     text-decoration: none;
-    font-family: "nonito";
     padding: 0.8rem;
     border-radius: 20px;
-    font-weight: 200;
-    font-size: 1.2em;
+    font-weight: 500;
+    font-size: 16px;
     background-color: #f8f8f8;
     color: #252525;
-    font-family: "Hepta-Slab";
+    font-family: "Hepta Slab";
+}
+
+#kontaktbutton:hover {
+    transition: color 0.5 ease;
+    color: #e26105;
 }
 
 /* Akzente im Text setzen mit dem "Span" Element*/
@@ -131,12 +134,8 @@ footer a {
 /*Bild in den Hintergrund & Größe festlegen*/
 .teaser img {
     object-fit: cover;
-    width: 750px;
-    height: 500px;
-    position: absolute;
-    max-width: 100%;
-    max-height: 100%;
-    object-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 /*Link Unterstriche entfernen*/
@@ -150,26 +149,25 @@ footer a {
     height: 400px;
     border-radius: 30px 30px 0px 0px;
     margin-bottom: 4rem;
-    position: relative;
     overflow: hidden;
 }
 
 /* Text Projekte & Erfahrung + Musik & Playlists vor dem Bild platzieren und formatieren */
 .teaser h2 {
-    position: relative;
     z-index: 1;
-    text-align: start;
-    color: #f7f7f7;
-    font-family: "Hepta-Slab";
+    color: #ffffff;
+    font-family: "Hepta Slab";
     font-weight: 200;
     background-color: #24512e;
     margin-top: 0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    margin-bottom: 0;
     padding-left: 3rem;
-    font-size: 2em;
+    font-size: 32px;
     box-sizing: border-box;
-    max-width: 750px;
+    height: auto;
+    /* Höhe automatisch anpassen */
+    padding: 10px 3rem;
+    /* Etwas mehr Padding für bessere Lesbarkeit */
 }
 
 /*contact.html Formatierungen*/
@@ -553,10 +551,10 @@ legend {
 
     #portfolio {
         position: absolute;
-        font-size: 6.6em;
-        transform: translateX(73%);
+        font-size: 80px;
+        transform: translateX(71%);
         letter-spacing: 3px;
-        top: -12px;
+        top: 22px;
     }
 
     #profil {
@@ -574,7 +572,7 @@ legend {
     }
 
     .teaser {
-        width: 40vw;
+        width: 42vw;
         max-width: 750px;
         min-height: 350px;
     }
@@ -613,8 +611,9 @@ legend {
     .nav a {
         text-decoration: none;
         color: #252525;
-        font-family: "Hepta-Slab";
-        font-size: 1.6em;
+        font-family: "Hepta Slab";
+        font-size: 22px;
+        font-weight: 400;
         transition: color 0.5s ease;
     }
 
@@ -681,7 +680,7 @@ legend {
     #mainmusik {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 200px 600px 550px ;
+        grid-template-rows: 200px 600px 550px;
         grid-template-areas:
             "einleitung bandbericht"
             "playlist1 bandbericht"
@@ -697,7 +696,6 @@ legend {
         margin-left: 8rem;
         padding-top: 0;
         align-self: center;
-        
     }
 
     .flexplaylist:nth-of-type(1) {
@@ -706,7 +704,6 @@ legend {
         margin-left: 8rem;
         margin-top: 0;
         align-self: center;
-     
     }
 
 
@@ -716,7 +713,6 @@ legend {
         margin-left: 8rem;
         margin-top: 0;
         padding-bottom: 4rem;
-   
     }
 
     #bandbericht {
@@ -724,7 +720,7 @@ legend {
         width: 43vw;
     }
 
-    #bandbericht h2{
+    #bandbericht h2 {
         margin-top: 0;
     }
 
@@ -735,102 +731,102 @@ legend {
     }
 }
 
-    /*Styling für das Hamburger Menü*/
-    @media (max-width: 1023px) {
+/*Styling für das Hamburger Menü*/
+@media (max-width: 1023px) {
 
-        /* Position des Hamburger Menüs*/
-        .menu-container {
-            position: fixed;
-            top: 30px;
-            right: 20px;
-        }
-
-        /* Verstecktes Checkbox-Element */
-        #menu-toggle {
-            display: none;
-        }
-
-        /* Hamburger Icon */
-        .menu-button {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            width: 35px;
-            height: 30px;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        /*Span Elemente zum Hamburger Icon stylen*/
-        .menu-button span {
-            width: 35px;
-            height: 4px;
-            background: #252525;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        /* Menüleiste */
-        .nav {
-            position: fixed;
-            top: 0;
-            /* Versteckt am Anfang */
-            right: -250px;
-            width: 250px;
-            height: 100vh;
-            background: #ffffff;
-            padding-top: 80px;
-            transition: right 0.3s ease-in-out;
-        }
-
-        /* Menüeinträge */
-        .nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav ul li {
-            padding: 15px;
-            text-align: center;
-        }
-
-        .nav ul li a {
-            text-decoration: none;
-            color: #252525;
-            font-family: "Hepta-Slab";
-            font-size: 1.2em;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .nav ul li a:active {
-            color: #e26105;
-        }
-
-        /* Menü öffnen */
-        #menu-toggle:checked~.nav {
-            right: 0;
-        }
-
-        /* Hamburger-Icon bei Klick zu Kreuz transformieren */
-        /*1. Span Balken rotieren*/
-        #menu-toggle:checked+.menu-button span:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
-        }
-
-        /*2. Span Balken ausblenden*/
-        #menu-toggle:checked+.menu-button span:nth-child(2) {
-            opacity: 0;
-        }
-
-        /*3. Span Balken in die entgegengesetzte Richtung rotieren*/
-        #menu-toggle:checked+.menu-button span:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
-        }
-
-
-
+    /* Position des Hamburger Menüs*/
+    .menu-container {
+        position: fixed;
+        top: 30px;
+        right: 20px;
     }
+
+    /* Verstecktes Checkbox-Element */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Hamburger Icon */
+    .menu-button {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        width: 35px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    /*Span Elemente zum Hamburger Icon stylen*/
+    .menu-button span {
+        width: 35px;
+        height: 4px;
+        background: #252525;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Menüleiste */
+    .nav {
+        position: fixed;
+        top: 0;
+        /* Versteckt am Anfang */
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #ffffff;
+        padding-top: 80px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    /* Menüeinträge */
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav ul li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav ul li a {
+        text-decoration: none;
+        color: #252525;
+        font-family: "Hepta Slab";
+        font-size: 19px;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .nav ul li a:active {
+        color: #e26105;
+    }
+
+    /* Menü öffnen */
+    #menu-toggle:checked~.nav {
+        right: 0;
+    }
+
+    /* Hamburger-Icon bei Klick zu Kreuz transformieren */
+    /*1. Span Balken rotieren*/
+    #menu-toggle:checked+.menu-button span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    /*2. Span Balken ausblenden*/
+    #menu-toggle:checked+.menu-button span:nth-child(2) {
+        opacity: 0;
+    }
+
+    /*3. Span Balken in die entgegengesetzte Richtung rotieren*/
+    #menu-toggle:checked+.menu-button span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+
+
+}
