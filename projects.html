@@ -4,10 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekte &amp Erfahrung</title>
+    <title>Projekte &amp; Erfahrung</title>
     <link rel="stylesheet" href="styles.css">
     <!--Einbindung der Icon Bibliothek von Font Awesome-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!--Fonts einbinden-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <!--Header und Footer mit Javascript laden-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer src="loader.js"></script>
@@ -20,16 +26,19 @@
 
     </header>
 
-    <main>
+    <main id="mainprojekte">
         <!--Einleitung auf die Seite-->
-        <h1>Projekte &amp Erfahrung</h1>
-        <p>Jedes Projekt ist eine neue Herausforderung – eine Chance, Nutzerbedürfnisse zu verstehen und durch Design
-            echten Mehrwert zu schaffen. Hier finden Sie einen Einblick in meine bisherigen Arbeiten und meine
-            Erfahrungen.</p>
-
+        <div id="einleitungstextprojekte">
+            <h1>Projekte &amp; Erfahrung</h1>
+            <p>Jedes Projekt ist eine neue Herausforderung – eine Chance, Nutzerbedürfnisse zu verstehen und durch
+                Design
+                echten Mehrwert zu schaffen.</p>
+            <p>Hier finden Sie einen Einblick in meine bisherigen Arbeiten und meine
+                Erfahrungen.</p>
+        </div>
         <!--Auflistung einzelne Skills in Boxen – Flexbox Darstellung-->
+        <h2 id="skillsh2">Skills</h2>
         <section id="skills-container">
-            <h2>Skills</h2>
 
             <div class="skill">
                 <h3>Empathie <span aria-hidden="true"><i class="fa-regular fa-heart"></i></span></h3>
@@ -59,23 +68,27 @@
 
         <!--Kurzvorstellung erstes Projekt: Kurzvorstellung, Stichpunkte und Bild-->
         <section id="projekt1">
-            <h3>DIY-Pflanzenbehälter-App – Nachhaltigkeit trifft Kreativität</h3>
-            <p>
-                Die fiktive App "ReFurnish" verbindet Upcycling mit urbanem Gärtnern und bietet einfache
-                Schritt-für-Schritt-Anleitungen,
-                um alte Möbel in stilvolle Pflanzenbehälter zu verwandeln. Nutzer können im DIY-Bereich Anleitungen nach
-                Möbelkategorien durchsuchen, im Community-Feed eigene Projekte teilen und sich inspirieren lassen oder
-                im Anzeigenmarkt kostenlos brauchbare Möbel weitergeben. Die intuitive Gestaltung und nachhaltige Vision
-                machen die App zur idealen Plattform für kreative Heimwerker und Pflanzenliebhaber.
-            </p>
+            <div class="projektbeschreibung">
+                <h3>DIY-Pflanzenbehälter-App – Nachhaltigkeit trifft Kreativität</h3>
+                <p>
+                    Die fiktive App "ReFurnish" verbindet Upcycling mit urbanem Gärtnern und bietet einfache
+                    Schritt-für-Schritt-Anleitungen,
+                    um alte Möbel in stilvolle Pflanzenbehälter zu verwandeln. Nutzer können im DIY-Bereich Anleitungen
+                    nach
+                    Möbelkategorien durchsuchen, im Community-Feed eigene Projekte teilen und sich inspirieren lassen
+                    oder
+                    im Anzeigenmarkt kostenlos brauchbare Möbel weitergeben. Die intuitive Gestaltung und nachhaltige
+                    Vision
+                    machen die App zur idealen Plattform für kreative Heimwerker und Pflanzenliebhaber.
+                </p>
 
-            <ul>
-                <li>Konkurrenz- und Zielgruppenanalyse</li>
-                <li>Wireframing &amp Prototyping</li>
-                <li>Informationsarchitektur &amp Usability</li>
-                <li>Interaktionsdesign &amp Testing</li>
-            </ul>
-
+                <ul>
+                    <li>Konkurrenz- und Zielgruppenanalyse</li>
+                    <li>Wireframing &amp; Prototyping</li>
+                    <li>Informationsarchitektur &amp; Usability</li>
+                    <li>Interaktionsdesign &amp; Testing</li>
+                </ul>
+            </div>
             <div class="projektbild">
                 <img src="./images/Urban_Gardening.jpg"
                     alt="Interfacegestaltung einer fiktiven App für DIY-Anleitungen für den Umbau von Sperrmüll zu eleganten Pflanzengefäßen"
@@ -85,20 +98,25 @@
 
         <!--Kurzvorstellung zweites Projekt: Kurzvorstellung, Stichpunkte und Bild-->
         <section id="projekt2">
-            <h3>Interaktiver Spiegel für ein nahtloses Shopping-Erlebnis</h3>
-            <p>In diesem Projekt habe ich ein Konzept für einen interaktiven Spiegel zum Einsatz im stationären Handel
-                ausgearbeitet. Der Spiegel ermöglicht es Kunden unter anderem Produkte direkt am Display zu suchen, die
-                Verfügbarkeit im Geschäft in Echtzeit zu prüfen und sich den genauen Standort im Laden anzeigen zu
-                lassen. So wird das Einkaufserlebnis intuitiver und effizienter gestaltet, indem digitale Funktionen
-                direkt in den physischen Verkaufsraum integriert werden. Diese können sowohl am Eingang des Geschäfts,
-                als auch in Kabinen implementiert werden</p>
+            <div class="projektbeschreibung">
+                <h3>Interaktiver Spiegel für ein nahtloses Shopping-Erlebnis</h3>
+                <p>In diesem Projekt habe ich ein Konzept für einen interaktiven Spiegel zum Einsatz im stationären
+                    Handel
+                    ausgearbeitet. Der Spiegel ermöglicht es Kunden unter anderem Produkte direkt am Display zu suchen,
+                    die
+                    Verfügbarkeit im Geschäft in Echtzeit zu prüfen und sich den genauen Standort im Laden anzeigen zu
+                    lassen. So wird das Einkaufserlebnis intuitiver und effizienter gestaltet, indem digitale Funktionen
+                    direkt in den physischen Verkaufsraum integriert werden. Diese können sowohl am Eingang des
+                    Geschäfts,
+                    als auch in Kabinen implementiert werden</p>
 
-            <ul>
-                <li>Konkurrenz- und Zielgruppenanalyse</li>
-                <li>Wireframing &amp Prototyping</li>
-                <li>Informationsarchitektur &amp Usability</li>
-                <li>Interaktive Touchscreen-Gestaltung</li>
-            </ul>
+                <ul>
+                    <li>Konkurrenz- und Zielgruppenanalyse</li>
+                    <li>Wireframing &amp; Prototyping</li>
+                    <li>Informationsarchitektur &amp; Usability</li>
+                    <li>Interaktive Touchscreen-Gestaltung</li>
+                </ul>
+            </div>
 
             <div class="projektbild">
                 <img src="./images/Interaktiver_Spiegel.jpg"
@@ -111,7 +129,7 @@
     <footer>
 
     </footer>
-    
+
 </body>
 
 </html>

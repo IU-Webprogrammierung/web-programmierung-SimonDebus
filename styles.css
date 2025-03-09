@@ -534,6 +534,135 @@ legend {
     white-space: nowrap;
 }
 
+/*Projekte & Erfahrung Styles*/
+#mainprojekte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#einleitungstextprojekte {
+    width: 80vw;
+}
+
+/*Überschrift*/
+#einleitungstextprojekte h1 {
+    font-family: "Hepta Slab";
+    font-size: 50px;
+    font-weight: 400;
+    color: #e26105;
+}
+
+#einleitungstextprojekte p {
+    font-family: "Nunito";
+    font-size: 20px;
+}
+/*Icon Farben*/
+.fa-heart{
+    color: #dd3232;
+}
+
+.fa-rectangle-list{
+    color: #9e6105;
+}
+
+.fa-lightbulb{
+    color: #929c04;
+}
+
+.fa-handshake{
+    color: #d16628;
+}
+/*Skill Container – Schriftarten & Flex-Container stylen*/
+#skillsh2 {
+    font-family: "Hepta Slab";
+    font-size: 50px;
+    font-weight: 400;
+    color: #e26105;
+    width: 80vw;
+    text-align: center;
+}
+
+#skills-container {
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 10px;
+    height: auto;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.skill {
+    border: 1px solid;
+    border-color: #24512e;
+    text-align: center;
+    background-color: #24512e0e;
+    width: 290px;
+    height: 250px;
+}
+
+.skill h3 {
+    font-family: "Hepta Slab";
+    font-weight: 600;
+    color: #24512e;
+}
+
+.skill p {
+    font-family: "Nunito";
+    font-size: 16px;
+    margin: 20px;
+}
+
+/*Projekte – Beschreibung + Bild*/
+#projekt1 {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    width: 100vw;
+    align-items: center;
+}
+
+.projektbeschreibung {
+    width: 70vw;
+}
+
+.projektbeschreibung h3 {
+    font-family: "Hepta Slab";
+    font-size: 26px;
+    font-weight: 500;
+    color: #e26105;
+}
+
+.projektbeschreibung p {
+    font-family: "Nunito";
+}
+
+.projektbeschreibung li {
+    font-family: "Nunito";
+}
+
+.projektbild {
+    height: auto;
+}
+
+.projektbild img {
+    width: 80vw;
+    max-width: 500px;
+}
+
+#projekt2 {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    background-color: #24512e0e;
+    width: 100vw;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
 /*Breakpoint bei 1024px*/
 @media (min-width: 1024px) {
 
