@@ -858,6 +858,46 @@ legend {
         width: 40vw;
         margin-top: 200px;
     }
+
+    /*Projekte & Erfahrung – Breakpoint formatierungen*/
+    .skill {
+        width: 18vw;
+        height: 325px;
+    }
+
+    #projekt1 {
+        flex-direction: row;
+        width: 100vw;
+       margin-left: 6rem;
+        justify-content: center;
+    }
+
+    #projekt2{
+        width: 100vw;
+        justify-content: center;
+        
+    }
+
+    .projektbild img{
+        width: 38vw;
+    }
+
+    .projektbild img:nth-child(){
+        margin-left: 6rem;
+    }
+
+    #projekt2 {
+        padding-left: 6rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+        flex-direction: row-reverse;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .projektbeschreibung{
+        width: 45vw;
+    }
 }
 
 /*Styling für das Hamburger Menü*/
