@@ -97,26 +97,6 @@ footer a {
     line-height: 35px;
 }
 
-/* Kontakt Button Formatierung */
-#kontaktbutton {
-    border: 0.1rem solid;
-    border-color: #e26105;
-    text-align: center;
-    text-decoration: none;
-    padding: 0.8rem;
-    border-radius: 20px;
-    font-weight: 500;
-    font-size: 16px;
-    background-color: #f8f8f8;
-    color: #252525;
-    font-family: "Hepta Slab";
-}
-
-#kontaktbutton:hover {
-    transition: color 0.5 ease;
-    color: #e26105;
-}
-
 /* Akzente im Text setzen mit dem "Span" Element*/
 .farbig {
     color: #24512e;
@@ -203,7 +183,7 @@ footer a {
     font-family: "Hepta Slab";
     font-weight: 400;
     font-size: 4em;
-    color: #24512e;
+    color: #e26105;
     margin-bottom: 20px;
 }
 
@@ -285,16 +265,19 @@ legend {
     line-height: 20px;
 }
 
-/*Absenden Button formatieren*/
-#absenden {
+/*Button formatieren*/
+.ctabutton {
     border-radius: 30px;
     padding: 10px;
-    width: 140px;
+    width: auto;
     background-color: #ffffff;
     border: 1px solid;
     border-color: #e26105;
     font-family: "Hepta Slab";
     font-size: 1.1em;
+    text-align: center;
+    color: #252525;
+    cursor: pointer;
 }
 
 #standorttext {
@@ -558,22 +541,24 @@ legend {
     font-family: "Nunito";
     font-size: 20px;
 }
+
 /*Icon Farben*/
-.fa-heart{
+.fa-heart {
     color: #dd3232;
 }
 
-.fa-rectangle-list{
+.fa-rectangle-list {
     color: #9e6105;
 }
 
-.fa-lightbulb{
+.fa-lightbulb {
     color: #929c04;
 }
 
-.fa-handshake{
+.fa-handshake {
     color: #d16628;
 }
+
 /*Skill Container – Schriftarten & Flex-Container stylen*/
 #skillsh2 {
     font-family: "Hepta Slab";
@@ -679,6 +664,12 @@ legend {
         max-height: 1200px;
     }
 
+    .ctabutton:hover {
+        transition: color 0.5 ease;
+        color: #ffffff;
+        background-color: #e26105;
+    }
+
     #portfolio {
         position: absolute;
         font-size: 80px;
@@ -711,7 +702,7 @@ legend {
     .nav {
         position: fixed;
         /* Volle Höhe des Viewports abzüglich Höhe des Footers damit die Navigationsleiste beim scrollen nicht über dem Footer liegt*/
-        height: calc(100vh - 115px);
+        height: calc(100vh - 130px);
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -722,7 +713,7 @@ legend {
     .nav ul {
         list-style: none;
         margin: 0;
-        margin-left: 2rem;
+        margin-left: 0.5rem;
         padding: 0;
         /* Vertikale Textausrichtung und umdrehen*/
         writing-mode: vertical-lr;
@@ -742,7 +733,7 @@ legend {
         text-decoration: none;
         color: #252525;
         font-family: "Hepta Slab";
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 400;
         transition: color 0.5s ease;
     }
@@ -873,29 +864,25 @@ legend {
         justify-content: center;
     }
 
-    #projekt2{
+    #projekt2 {
         width: 100vw;
         justify-content: center;
         margin: 4rem;
     }
 
-    .projektbild img{
+    .projektbild img {
         width: 38vw;
-    }
-
-    .projektbild img:nth-child(){
-        margin-left: 6rem;
     }
 
     #projekt2 {
         padding-bottom: 2rem;
         flex-direction: row-reverse;
         gap: 30px;
-        justify-content: center ;
+        justify-content: center;
         max-width: 1920px;
     }
 
-    .projektbeschreibung{
+    .projektbeschreibung {
         width: 45vw;
     }
 }
