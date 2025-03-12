@@ -539,6 +539,7 @@ legend {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1920px;
 }
 
 #einleitungstextprojekte {
@@ -585,10 +586,10 @@ legend {
 
 #skills-container {
     width: 80vw;
+    max-width: 1920px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    column-gap: 10px;
     height: auto;
     gap: 20px;
     align-items: flex-start;
@@ -867,15 +868,15 @@ legend {
 
     #projekt1 {
         flex-direction: row;
-        width: 100vw;
-       margin-left: 6rem;
+        max-width: 1920px;
+        margin-top: 4rem;
         justify-content: center;
     }
 
     #projekt2{
         width: 100vw;
         justify-content: center;
-        
+        margin: 4rem;
     }
 
     .projektbild img{
@@ -887,12 +888,11 @@ legend {
     }
 
     #projekt2 {
-        padding-left: 6rem;
-        padding-right: 1rem;
         padding-bottom: 2rem;
         flex-direction: row-reverse;
         gap: 30px;
-        justify-content: center;
+        justify-content: center ;
+        max-width: 1920px;
     }
 
     .projektbeschreibung{
