@@ -278,6 +278,7 @@ legend {
     text-align: center;
     color: #252525;
     cursor: pointer;
+    text-decoration: none;
 }
 
 #standorttext {
@@ -647,6 +648,33 @@ legend {
     width: 100vw;
     align-items: center;
     margin-bottom: 3rem;
+}
+
+/*404-Seite*/
+#main404{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#flex404{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#flex404 h1{
+    font-family: "nunito";
+    font-size: 36px;
+    color:#b60c0c;
+    margin: 0;
+}
+
+#flex404 p{
+    font-size: 20px;
+    font-family: "nunito";
 }
 
 /*Breakpoint bei 1024px*/
