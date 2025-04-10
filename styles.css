@@ -6,6 +6,35 @@ body {
     background-color: #F8F8F8;
 }
 
+/*Flaggen Stile für die Änderung der Sprache*/
+#language-switcher {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#language-switcher img {
+    width: 32px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/*Flaggen werden größer bei Hover*/
+#language-switcher img:hover {
+    transform: scale(1.1);
+}
+
+/*Stile des Elements "Button" entfernen, der den Flaggen gegeben wurde, damit diese per Tab anvisiert werden können*/
+#language-switcher button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
 /*Globaler Footer - Formatierungen*/
 footer {
     display: flex;
@@ -781,6 +810,11 @@ legend {
     /* Hover-Effekt */
     .nav a:hover {
         color: #e26105;
+    }
+
+    /*Flaggen im Desktop-Menü übereinander platzieren*/
+    #language-switcher {
+        flex-direction: column;
     }
 
     /*Checkbox für die mobile Navigation ab 1024px ausblenden */
