@@ -41,3 +41,4 @@ Kontaktformular (form) und natürlich Bilder und interaktive Elemente. Die Navig
   <li>individuelle 404-Seite</li>
   <li>responsive Bildgrößen mit picture</li>
 </ul>
+
