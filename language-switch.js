@@ -2,9 +2,14 @@ function switchLanguage(lang) {
   const path = window.location.pathname;
   const filename = path.split('/').pop();
 
+  const isEnglish = filename.includes('-en.html');
+  const baseName = filename.replace('-en.html', '').replace('.html', '');
+
   if (lang === 'en') {
-    window.location.href = filename.replace('.html', '-en.html');
+    const target = isEnglish ? `${baseName}-en.html` : `${baseName}-en.html`;
+    window.location.href = target;
   } else if (lang === 'de') {
-    window.location.href = filename.replace('-en.html', '.html');
+    const target = isEnglish ? `${baseName}.html` : `${baseName}.html`;
+    window.location.href = target;
   }
 }
