@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music &amp; Playlists</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Icon Bibliothek-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!--Fonts einbinden-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <!--Header und Footer mit Javascript laden-->
+    <script defer src="loader.js"></script>
+    <!--Favicon für das Browser Fenster hinzufügen-->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main id="mainmusik">
+        <!--Einleitung auf die Seite-->
+        <div id="einleitungstextmusik">
+            <h1>My soundtrack for life <span aria-hidden="true"><i class="fa-regular fa-circle-play"></i></span>
+            </h1>
+            <p>It's all about my musical world - from personal playlists and favorite artists to the next concerts I'm
+                going to see live.</p>
+        </div>
+
+        <!--Einzelne Section für Flexbox Anordnung; Text auf Bild, Spotify Icon & Playlist iframe-->
+        <section class="flexplaylist">
+            <div class="genre">
+                <h2>Indie</h2>
+                <img src="./images/Indie.jpeg" alt="brown acoustic guitars next to each other close-up" width="100%">
+            </div>
+
+            <div class="spotifylogo">
+                <a href="https://open.spotify.com/user/21czliqz4yb72epyzsu43xe4y?si=28dde5a5e30e40d2 " target="_blank"
+                    rel="noopener" aria-label="To my Spotify profile">
+                    <i class="fab fa-spotify"></i>
+                    <p>My Spotify profile</p>
+                </a>
+            </div>
+
+            <div class="embeddedplaylist">
+                <iframe
+                    src="https://open.spotify.com/embed/playlist/78vITedlGljiB71cpCDw3h?utm_source=generator&theme=0"
+                    title="Indie playlist on Spotify" width="100%" frameborder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!--Einzelne Section für Flexbox Anordnung; Text auf Bild, Spotify Icon & Playlist iframe-->
+        <section class="flexplaylist">
+            <div class="genre">
+                <h2>Metal</h2>
+                <img src="./images/Metalcore.jpeg" alt="View of a concert with a singer on stage" width="100%">
+            </div>
+
+            <div class="spotifylogo">
+                <a href="https://open.spotify.com/user/21czliqz4yb72epyzsu43xe4y?si=28dde5a5e30e40d2 " target="_blank"
+                    rel="noopener" aria-label="To my Spotify profile">
+                    <i class="fab fa-spotify"></i>
+                    <p>My Spotify profile</p>
+                </a>
+            </div>
+
+            <div class="embeddedplaylist">
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/playlist/2xJcE990RKqzJkHya7vRX2?utm_source=generator"
+                    title="Metalcore Playlist auf Spotify" width="100%" frameborder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!--Bandbericht – Überschrift, Text auf Bild & Textabschnitt-->
+        <section id="bandbericht">
+            <h2>Where it all began</h2>
+
+            <div class="genre">
+                <h2>Die Ärzte</h2>
+                <img src="./images/DieAerzte.jpeg"
+                    alt="Die Ärzte concert, Farin Urlaub at the microphone, crowd in front of the stage" width="100%">
+            </div>
+
+            <p>The music of the punk band “Die Ärzte” was the first I actively started listening to. To this day, the
+                songs of Die Ärzte have influenced and inspired me.</p>
+            <p>The song “Schrei nach Liebe”, which is directed against hatred and intolerance, made me aware early on
+                that I shouldn't look away when others are marginalized and to raise my voice when injustice happens.
+            </p>
+            <p>"Junge” also had a lasting influence on me. This song addresses the tension between social expectations
+                and one's own path in life. It has helped me to deal with external expectations and to go my own way
+                with more self-confidence, even if not everyone agrees with me.</p>
+        </section>
+
+        <!--Tabellarische Auflistung der nächsten Konzerte & Festivals-->
+        <table id="konzerte">
+            <caption>
+                <h2>Next concerts &amp; festivals</h2>
+            </caption>
+
+            <thead>
+                <tr>
+                    <th>Band/Festival</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Rock am Ring</td>
+                    <td>Nürburgring</td>
+                    <td>06.06.2025 - 08.06.2025</td>
+                </tr>
+
+                <tr>
+                    <td>Linkin Park &amp; Architects</td>
+                    <td>Düsseldorf</td>
+                    <td>01.07.2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="language-switch.js"></script>
+
+</body>
+
+</html>
